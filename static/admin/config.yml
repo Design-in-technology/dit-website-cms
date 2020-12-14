@@ -49,22 +49,29 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'projects'
+  - name: 'clients'
     # identifier_field: name
-    label: 'Projects'
-    label_singular: 'Project'
-    folder: 'assets/content/projects'
+    label: 'Clients'
+    label_singular: 'Client'
+    folder: 'assets/content/clients'
     create: true
     format: 'json'
-    slug: '{{project_type}}-{{slug}}'
-    preview_path: 'projects/{{slug}}'
+    slug: '{{product_type}}-{{slug}}'
+    preview_path: 'client/{{slug}}'
     fields:
       - {
-          label: 'Project Type',
-          name: 'project_type',
+          label: 'Product Type',
+          name: 'product_type',
           widget: 'select',
-          default: 'story',
-          options: [{ label: 'Story', value: 'story' }, { label: 'Photo', value: 'photo' }],
+          default: 'website',
+          options: [{ label: 'Website', value: 'website' }, { label: 'App', value: 'app' }, { label: 'Community Platform', value: 'community platform' }, { label: 'E-commerce website', value: 'e-commerce website' }, { label: 'Digital identity', value: 'digital identity' }],
+        }
+      - {
+          label: 'Client Category',
+          name: 'client_category',
+          widget: 'select',
+          default: 'finance',
+          options: [{ label: 'Finance', value: 'finance' }, { label: 'Social Domain', value: 'social domain' }, { label: 'Entertainment Industry', value: 'entertainment industry' }, { label: 'Government agencies', value: 'government agencies' }],
         }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Title', name: 'title', widget: 'string' }
