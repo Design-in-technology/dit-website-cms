@@ -9,6 +9,8 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+locale: nl
+
 # Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
   - label: 'Site settings'
