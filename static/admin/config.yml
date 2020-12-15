@@ -15,8 +15,6 @@ i18n:
 
 # Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
-  - name: i18n_content
-    i18n: true
   - label: 'Site settings'
     name: 'site'
     files:
