@@ -9,10 +9,14 @@ backend:
 media_folder: static/img
 public_folder: /img
 
-locale: nl
+i18n:
+  structure: multiple_folders
+  locales: [en, nl]
 
 # Docs: https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
+  - name: i18n_content
+    i18n: true
   - label: 'Site settings'
     name: 'site'
     files:
@@ -42,15 +46,16 @@ collections:
     # identifier_field: name
     folder: 'assets/content/blog'
     create: true
+    i18n: true
     format: 'json'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     # editor:
     #   preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Title', name: 'title', widget: 'string', i18n: true }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', i18n: true }
+      - { label: 'Description', name: 'description', widget: 'string', i18n: true }
+      - { label: 'Body', name: 'body', widget: 'markdown', i18n: true }
   - name: 'clients'
     # identifier_field: name
     label: 'Clients'
