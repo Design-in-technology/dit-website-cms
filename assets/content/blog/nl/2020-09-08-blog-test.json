@@ -1,0 +1,6 @@
+{
+  "date": "2020-12-15T10:12:00.847Z",
+  "title": "Dit is een blog post in het Cederlands",
+  "description": "Mijn eerst blogpost in het Nederlands",
+  "body": "Ik probeer Netlify cms met de i18n feature te implementeren."
+}
